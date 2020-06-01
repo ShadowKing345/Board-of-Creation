@@ -7,7 +7,7 @@ namespace Inventory
     [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory/Inventory", order = 0)]
     public class Inventory : ScriptableObject
     {
-        [SerializeField] private List<Itemstack> slots;
+        public Itemstack[] slots;
 
         public Itemstack GetItemStackFromSlot(int slot)
         {
@@ -18,7 +18,7 @@ namespace Inventory
         // todo: implements binary search.
         public int ContainsItemstack(Itemstack itemstack)
         {
-            for (var index = 0; index < slots.Count; index++)
+            for (var index = 0; index < slots.Length; index++)
             {
                 var slot = slots[index];
                 if (slot.IsEmpty()) continue;
@@ -39,7 +39,7 @@ namespace Inventory
             }
             else
             {
-                for (int i = 0; i < slots.Count; i++)
+                for (int i = 0; i < slots.Length; i++)
                 {
                     if (slots[i].IsEmpty())
                     {

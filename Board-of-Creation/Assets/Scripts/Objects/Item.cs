@@ -12,7 +12,7 @@ namespace Objects
         [TextArea(10, 20)] public string description;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class Itemstack
     {
         public Item item;
