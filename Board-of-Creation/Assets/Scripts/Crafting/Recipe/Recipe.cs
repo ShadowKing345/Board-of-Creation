@@ -1,6 +1,6 @@
 ﻿using Objects;
+using Ui;
 using UnityEngine;
-using Item = Ui.Item;
 
 namespace Crafting.Recipe
 {

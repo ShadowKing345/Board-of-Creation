@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Linq;
 using Objects;
-using Item = Ui.Item;
+using Ui;
 
 namespace Crafting
 {
@@ -23,9 +23,9 @@ namespace Crafting
             recipes = Resources.LoadAll<Recipe.Recipe>("Recipes");
         }
         
-        public List<Recipe.Recipe> FindRecipe(Item input1, Item input2)
+        public Recipe.Recipe FindRecipe(Item input1, Item input2)
         {
-            return recipes.Where(recipe => recipe.input1 == input1 && recipe.input2 == input2).ToList();
+            return recipes.FirstOrDefault(recipe => recipe.input1 == input1 && recipe.input2 == input2);
         }
     }
 }
