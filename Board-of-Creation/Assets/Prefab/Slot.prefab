@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 64a571e13dea16c42b331d20f7329955, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -163,15 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49de17ed6ff2134ba16abe608636fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 2363131201988914520}
-  text: {fileID: 4062501750159891754}
   stack:
     item: {fileID: 0}
     amount: 0
     stackSize: 999
+  image: {fileID: 2363131201988914520}
+  text: {fileID: 4062501750159891754}
   canvas: {fileID: 0}
-  itemUiObjPrefab: {fileID: 5432120885363895612, guid: c872e89c59a49bb46b3b81117959aaac,
-    type: 3}
 --- !u!1 &6503315933999279288
 GameObject:
   m_ObjectHideFlags: 0
