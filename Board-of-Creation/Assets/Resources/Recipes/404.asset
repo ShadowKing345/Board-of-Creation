@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14745175fb434d541965a5a3d226c33c, type: 3}
   m_Name: 404
   m_EditorClassIdentifier: 
-  input1: {fileID: 0}
-  input2: {fileID: 0}
-  result: {fileID: 0}
+  input1: {fileID: 11400000, guid: fe3611a0c344bda4589bfc0d33cd5fb5, type: 2}
+  input2: {fileID: 11400000, guid: 782ce5e34100ebf44a82603f982abc83, type: 2}
+  result: {fileID: 11400000, guid: 654e65d1c87e6944f9f2fc7203a8673b, type: 2}
   timeTaken: 0
