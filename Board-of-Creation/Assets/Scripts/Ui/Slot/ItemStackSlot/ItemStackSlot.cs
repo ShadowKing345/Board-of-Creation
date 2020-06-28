@@ -1,10 +1,8 @@
-﻿using System;
-using Objects;
+﻿using Objects;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Ui
+namespace BoardOfCreation.Ui.Slot.ItemStackSlot
 {
     public class ItemStackSlot : MonoBehaviour
     {
