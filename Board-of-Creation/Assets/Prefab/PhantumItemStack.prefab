@@ -184,3 +184,5 @@ MonoBehaviour:
     item: {fileID: 0}
     amount: 0
     stackSize: 999
+  image: {fileID: 3262160809061065420}
+  cam: {fileID: 0}
