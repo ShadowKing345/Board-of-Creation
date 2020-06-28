@@ -1,7 +1,7 @@
 ﻿using Objects;
 using UnityEngine.EventSystems;
 
-namespace Ui
+namespace BoardOfCreation.Ui.Slot.ItemSlot
 {
     public class CraftingSlot : ItemSlotBase
     {

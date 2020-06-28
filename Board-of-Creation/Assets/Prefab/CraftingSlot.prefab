@@ -164,5 +164,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 3293551768358574307}
   item: {fileID: 0}
-  phantomItemPrefab: {fileID: 5372581866827657450, guid: a17ab991c27ca6747941327e0b3165ab,
+  phantomItemPrefab: {fileID: 5432120885363895612, guid: c872e89c59a49bb46b3b81117959aaac,
     type: 3}
