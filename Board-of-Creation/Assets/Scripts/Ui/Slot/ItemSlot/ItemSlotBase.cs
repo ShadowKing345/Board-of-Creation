@@ -3,14 +3,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Ui
+namespace BoardOfCreation.Ui.Slot.ItemSlot
 {
-    public class ItemSlotBase : MonoBehaviour,IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerClickHandler
+    public class ItemSlotBase : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerClickHandler
     {
         [SerializeField] protected Image image;
         [SerializeField] protected Item item;
         [SerializeField] protected GameObject phantomItemPrefab;
-        private GameObject _phantomItem;
+        private GameObject phantomItem;
 
         private void Start()
         {
@@ -19,6 +19,8 @@ namespace Ui
         
         protected virtual void UpdateItemImagePreview()
         {
+            if(!image) return;
+            
             image.enabled = (bool) item;
             image.sprite = item ? item.image : null;
         }
@@ -52,16 +54,15 @@ namespace Ui
             if (!item) return;
             if (!phantomItemPrefab) return;
             
-            _phantomItem = Instantiate(phantomItemPrefab, GetComponentInParent<Canvas>().transform);
+            phantomItem = Instantiate(phantomItemPrefab, GetComponentInParent<Canvas>().transform);
             
-            var hold = _phantomItem.GetComponent<PhantomItem>();
-            if (hold) 
-                hold.SetItem(item);
+            var hold = phantomItem.GetComponent<IPhantomItem>();
+            hold.SetItem(item);
         }
 
         public virtual void OnEndDrag(PointerEventData eventData)
         {
-            Destroy(_phantomItem);
+            Destroy(phantomItem);
         }
     }
 }
