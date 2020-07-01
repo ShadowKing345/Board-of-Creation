@@ -1,29 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using BoardOfCreation.Objects;
 using UnityEngine;
-using System.Linq;
-using Objects;
-using Ui;
 
-namespace Crafting
+namespace BoardOfCreation.Crafting.Recipe
 {
     public class RecipeManager : MonoBehaviour
     {
-        public static RecipeManager Instance;
+        public static RecipeManager current;
         
         public void Awake()
         {
-            Instance = this;
+            current = this;
         }
 
         [SerializeField]
-        private Recipe.Recipe[] recipes;
+        private Recipe[] recipes;
         
         public void Start()
         {
-            recipes = Resources.LoadAll<Recipe.Recipe>("Recipes");
+            recipes = Resources.LoadAll<Recipe>("Recipes");
         }
         
-        public Recipe.Recipe FindRecipe(Item input1, Item input2)
+        public Recipe FindRecipe(Item input1, Item input2)
         {
             return recipes.FirstOrDefault(recipe => recipe.input1 == input1 && recipe.input2 == input2);
         }
