@@ -1,4 +1,4 @@
-﻿using Objects;
+﻿using BoardOfCreation.Objects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +6,7 @@ namespace BoardOfCreation.Ui.Slot.ItemStackSlot
 {
     public class ItemStackSlot : MonoBehaviour
     {
-        public Itemstack stack;
+        public ItemStack stack;
         [SerializeField] private Image image;
         [SerializeField] private Text text;
         [SerializeField] private Canvas canvas;
