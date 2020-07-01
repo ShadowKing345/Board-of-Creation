@@ -1,10 +1,9 @@
-﻿using Objects;
+﻿using BoardOfCreation.Objects;
 
 namespace BoardOfCreation.Ui.Slot
 {
     public interface IPhantomItem
     {
-        void SetItem(Item item);
-        void SetItemStack(Itemstack itemstack);
+        void SetItemStack(ItemStack itemStack);
     }
 }

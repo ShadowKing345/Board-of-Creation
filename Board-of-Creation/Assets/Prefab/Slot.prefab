@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64a571e13dea16c42b331d20f7329955, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1182454032597574872}
   - component: {fileID: 1073409954091617810}
   - component: {fileID: 6097144111589508140}
-  - component: {fileID: 7092043605490583781}
+  - component: {fileID: 7558960930800800050}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7092043605490583781
+--- !u!114 &7558960930800800050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,16 +160,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2442630343626464440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49de17ed6ff2134ba16abe608636fa7, type: 3}
+  m_Script: {fileID: 11500000, guid: 870f81a63a0d4434ad4271198470699f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 0}
+  id: 0
+  image: {fileID: 2363131201988914520}
+  text: {fileID: 4062501750159891754}
   stack:
     item: {fileID: 0}
     amount: 0
     stackSize: 999
-  image: {fileID: 2363131201988914520}
-  text: {fileID: 4062501750159891754}
-  canvas: {fileID: 0}
+  phantomItemPrefab: {fileID: 5432120885363895612, guid: c872e89c59a49bb46b3b81117959aaac,
+    type: 3}
 --- !u!1 &6503315933999279288
 GameObject:
   m_ObjectHideFlags: 0

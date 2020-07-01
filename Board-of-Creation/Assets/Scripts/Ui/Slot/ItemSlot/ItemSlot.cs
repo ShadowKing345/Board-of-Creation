@@ -1,6 +1,6 @@
 ﻿namespace BoardOfCreation.Ui.Slot.ItemSlot
 {
-    public class ItemSlot : ItemSlotBase
+    public class ItemSlot : SlotBase
     {
     }
 }

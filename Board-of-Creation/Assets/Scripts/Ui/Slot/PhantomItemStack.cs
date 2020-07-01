@@ -1,5 +1,5 @@
 ﻿using System;
-using Objects;
+using BoardOfCreation.Objects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,20 +8,21 @@ namespace BoardOfCreation.Ui.Slot
     public class PhantomItemStack : MonoBehaviour, IPhantomItem
     {
         [SerializeField] private Text text;
-        [SerializeField] private Itemstack stack;
+        [SerializeField] private ItemStack stack;
         [SerializeField] private Image image;
 
         private void Awake()
         {
             if (stack == null)
-                stack = new Itemstack();
+                stack = new ItemStack();
 
             UpdateImage();
+            transform.position = Input.mousePosition;
         }
 
         private void UpdateImage()
         {
-            if(!image || stack.item == null) return;
+            if(!image || stack.HasNoItem()) return;
             image.sprite = stack.item.image;
             
             if (!text) return;
@@ -29,15 +30,9 @@ namespace BoardOfCreation.Ui.Slot
             text.text = stack.Amount.ToString();
         }
 
-        public void SetItem(Item item)
+        public void SetItemStack(ItemStack itemStack)
         {
-            stack.item = item;
-            UpdateImage();
-        }
-
-        public void SetItemStack(Itemstack itemstack)
-        {
-            stack = itemstack;
+            stack = itemStack;
             UpdateImage();
         }
 
