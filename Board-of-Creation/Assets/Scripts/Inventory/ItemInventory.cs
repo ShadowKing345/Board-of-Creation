@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Objects;
+using BoardOfCreation.Objects;
 using UnityEngine;
 
-namespace Inventory
+namespace BoardOfCreation.Inventory
 {
     [CreateAssetMenu(fileName = "New Item Inventory", menuName = "Inventory/Item Inventory", order = 1)]
     public class ItemInventory : ScriptableObject
@@ -17,7 +17,6 @@ namespace Inventory
             {
                 if (slots[i] != null) continue;
                 slots[i] = item;
-                GameEvents.Current.UpdateItemInventory();
                 return null;
             }
 
