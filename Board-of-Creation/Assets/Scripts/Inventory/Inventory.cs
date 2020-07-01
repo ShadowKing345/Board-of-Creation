@@ -1,11 +1,11 @@
-﻿using Objects;
+﻿using BoardOfCreation.Objects;
 using UnityEngine;
 
-namespace Inventory
+namespace BoardOfCreation.Inventory
 {
     [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory/Inventory", order = 0)]
     public class Inventory : ScriptableObject
     {
-        public Itemstack[] slots;
+        public ItemStack[] slots;
     }
 }

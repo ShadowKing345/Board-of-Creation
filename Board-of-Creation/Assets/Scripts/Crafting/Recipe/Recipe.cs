@@ -1,8 +1,7 @@
-﻿using Objects;
-using Ui;
+﻿using BoardOfCreation.Objects;
 using UnityEngine;
 
-namespace Crafting.Recipe
+namespace BoardOfCreation.Crafting.Recipe
 {
     [CreateAssetMenu(fileName = "New Recipe", menuName = "Crafting/Recipe", order = 0)]
     public class Recipe : ScriptableObject

@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Ui
+namespace BoardOfCreation.Ui
 {
     public class InventoryGridLayout : LayoutGroup
     {
