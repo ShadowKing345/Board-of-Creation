@@ -30,7 +30,7 @@ namespace BoardOfCreation.Ui.Containers
             EventManager.current.OnResultSlotUpdated += slot =>
             {
                 if (slot != resultSlot) return;
-                //AddItemToList(slot.Item);
+                AddItemToList(slot.Item);
                 ClearCraftingSlots();
             };
 
@@ -68,8 +68,8 @@ namespace BoardOfCreation.Ui.Containers
         private void UpdateResult()
         {
             Item result = CraftingManager.current.FindRecipeResult(input1.Item, input2.Item);
-            if (result)
-                resultSlot.Item = result;
+            if (result) resultSlot.Item = result;
+            else resultSlot.ClearSlot();
         }
 
         private void UpdateItemInventory()
