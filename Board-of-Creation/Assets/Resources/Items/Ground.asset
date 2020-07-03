@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea7a40eb26984c44836b0a57abc42b39, type: 3}
-  m_Name: Fire
+  m_Name: Ground
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 64a571e13dea16c42b331d20f7329955, type: 3}
-  description: Careful it is hot.
+  description: Technically what you are standing on.
