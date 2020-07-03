@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14745175fb434d541965a5a3d226c33c, type: 3}
-  m_Name: 404
+  m_Name: Wet
   m_EditorClassIdentifier: 
-  input1: {fileID: 11400000, guid: fe3611a0c344bda4589bfc0d33cd5fb5, type: 2}
-  input2: {fileID: 11400000, guid: 782ce5e34100ebf44a82603f982abc83, type: 2}
-  result: {fileID: 11400000, guid: 654e65d1c87e6944f9f2fc7203a8673b, type: 2}
+  input1: {fileID: 11400000, guid: 782ce5e34100ebf44a82603f982abc83, type: 2}
+  input2: {fileID: 0}
+  result: {fileID: 11400000, guid: c5c62bd7c82c5944382821a17ad19e93, type: 2}
   timeTaken: 0
