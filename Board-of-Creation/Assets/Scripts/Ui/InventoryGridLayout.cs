@@ -6,7 +6,6 @@ namespace BoardOfCreation.Ui
     public class InventoryGridLayout : LayoutGroup
     {
         [SerializeField] private Vector2 spacing;
-        
         [SerializeField] private int columns;
         [SerializeField] private Vector2 cellSize;
 
@@ -30,16 +29,8 @@ namespace BoardOfCreation.Ui
             }
         }
 
-        public override void CalculateLayoutInputVertical()
-        {
-        }
-
-        public override void SetLayoutHorizontal()
-        {
-        }
-
-        public override void SetLayoutVertical()
-        {
-        }
+        public override void CalculateLayoutInputVertical() { }
+        public override void SetLayoutHorizontal() { }
+        public override void SetLayoutVertical() { }
     }
 }
