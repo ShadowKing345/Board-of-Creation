@@ -1,9 +1,8 @@
-﻿using System;
-using BoardOfCreation.Objects;
+﻿using BoardOfCreation.Objects;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BoardOfCreation.Ui.Slot
+namespace BoardOfCreation.Ui.Slot.PhantomItem
 {
     public class PhantomItemStack : MonoBehaviour, IPhantomItem
     {
