@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace BoardOfCreation.Ui.Slot
 {
-    public interface ISlot: IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerClickHandler
+    public interface ISlot: IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         Container Container { get; set; }
         int Id { get; set; }

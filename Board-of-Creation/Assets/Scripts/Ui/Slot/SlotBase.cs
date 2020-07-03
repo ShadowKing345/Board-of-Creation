@@ -1,6 +1,7 @@
 ﻿using System;
 using BoardOfCreation.Objects;
 using BoardOfCreation.Ui.Containers;
+using BoardOfCreation.Ui.Slot.PhantomItem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,16 +11,26 @@ namespace BoardOfCreation.Ui.Slot
     public class SlotBase : MonoBehaviour, ISlot
     {
         #region Varibles
+        public Container Container { get => container; set => container = value; }
         [SerializeField] private Container container;
+        public int Id { get => id; set => id = value; }
         [SerializeField] private int id;
         
         [SerializeField] protected Image image;
         [SerializeField] protected Text text;
+        
+        #region PhantomItem
+            [SerializeField] protected GameObject phantomItemPrefab;
+            private GameObject phantomItem;
+        #endregion
+        
+        #region HoverUiElement
+            [SerializeField] protected GameObject hoverUiElementPrefab;
+            private GameObject hoverUiElement;
+        #endregion
+        
+        #region ItemStack
         [SerializeField] protected ItemStack stack;
-        [SerializeField] protected GameObject phantomItemPrefab;
-
-        public Container Container { get => container; set => container = value; }
-        public int Id { get => id; set => id = value; }
         public virtual ItemStack Stack
         {
             get => stack;
@@ -30,13 +41,16 @@ namespace BoardOfCreation.Ui.Slot
                 EventManager.current.SlotUpdated(this);
             }
         }
+
         public virtual Item Item
         {
             get => stack.HasNoItem() ? null : stack.item;
             set => Stack = new ItemStack() {item = value};
         }
-        
-        private GameObject phantomItem;
+
+        #endregion
+
+        private Canvas canvas;
         #endregion
         
         private void Start()
@@ -87,18 +101,27 @@ namespace BoardOfCreation.Ui.Slot
         public virtual void OnBeginDrag(PointerEventData eventData)
         {
             if (stack.HasNoItem() || !phantomItemPrefab) return;
+            if (!canvas) canvas = GetComponentInParent<Canvas>();
             
-            phantomItem = Instantiate(phantomItemPrefab, GetComponentInParent<Canvas>().transform);
+            phantomItem = Instantiate(phantomItemPrefab, canvas.transform);
             
             var hold = phantomItem.GetComponent<IPhantomItem>();
             hold.SetItemStack(stack);
         }
 
-        public virtual void OnEndDrag(PointerEventData eventData)
+        public virtual void OnEndDrag(PointerEventData eventData) => Destroy(phantomItem);
+
+        public virtual void OnPointerEnter(PointerEventData eventData)
         {
-            Destroy(phantomItem);
+            if (!hoverUiElementPrefab || stack.HasNoItem()) return;
+            if (!canvas) canvas = GetComponentInParent<Canvas>();
+
+            hoverUiElement = Instantiate(hoverUiElementPrefab, canvas.transform);
+            hoverUiElement.GetComponent<HoverUiElement.HoverUiElement>().Item = stack.item;
         }
-        
+
+        public virtual void OnPointerExit(PointerEventData eventData) => Destroy(hoverUiElement);
+
         #endregion
     }
 }
