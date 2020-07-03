@@ -16,12 +16,14 @@ MonoBehaviour:
   id: 0
   image: {fileID: 2364809334277220928}
   text: {fileID: 4069597171907893810}
+  phantomItemPrefab: {fileID: 5432120885363895612, guid: c872e89c59a49bb46b3b81117959aaac,
+    type: 3}
+  hoverUiElementPrefab: {fileID: 694473556603816763, guid: 34cb07151978fa743acff0e8b230b9ec,
+    type: 3}
   stack:
     item: {fileID: 0}
     amount: 0
     stackSize: 999
-  phantomItemPrefab: {fileID: 5432120885363895612, guid: c872e89c59a49bb46b3b81117959aaac,
-    type: 3}
 --- !u!1001 &7594059035035416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 2442630343626464440, guid: ebbcd7e5bc43ae849b424be12924146a,
         type: 3}
       propertyPath: m_Name
-      value: ResultSlot
+      value: Result Slot
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7558960930800800050, guid: ebbcd7e5bc43ae849b424be12924146a, type: 3}
